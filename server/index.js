@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const axios = require('axios');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get("/api/buses", (req, res) => {
     axios.get("https://api.translink.ca/rttiapi/v1/buses", {
