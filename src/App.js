@@ -22,7 +22,7 @@ class App extends Component {
     }
 
     async componentDidMount() {
-        const response = await axios.get('http://localhost:3001/api/buses');
+        const response = await axios.get('https://whispering-harbor-35429.herokuapp.com/api/buses');
         const json = await response.json();
         this.setState({ buses: json });
     }

@@ -1,8 +1,11 @@
-const express = require("express");
+const express = require('express');
+const cors = require('cors');
 const app = express();
 const axios = require('axios');
 
 const PORT = process.env.PORT || 3001;
+
+app.use(cors());
 
 app.get("/api/buses", (req, res) => {
     axios.get("https://api.translink.ca/rttiapi/v1/buses", {
