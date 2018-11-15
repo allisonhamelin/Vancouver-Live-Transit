@@ -3,12 +3,11 @@ import ReactMapGL, {Marker} from 'react-map-gl';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBus, faCircle} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css';
-import axios from './Axios';
 
 library.add(faBus, faCircle);
-
 
 class App extends Component {
     constructor(props) {
@@ -73,8 +72,6 @@ class App extends Component {
             </ReactMapGL>
         );
     }
-
-
 }
 
 export default App;

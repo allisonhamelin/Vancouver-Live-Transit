@@ -7,13 +7,13 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 
-app.get("/api/buses", (req, res) => {
-    axios.get("https://api.translink.ca/rttiapi/v1/buses", {
+app.get('/api/buses', (req, res) => {
+    axios.get('https://api.translink.ca/rttiapi/v1/buses', {
         headers: {
             'Accept': 'application/json',
         },
         params: {
-            apiKey: '4lIStDLCCUf2e7agXStz'
+            apiKey: process.env.TRANSLINK_KEY,
         }
     })
         .then(axiosRes => {
@@ -25,7 +25,7 @@ app.get("/api/buses", (req, res) => {
         })
 });
 
-app.get("*", (req, res) => {
+app.get('*', (req, res) => {
     res.sendStatus(404);
 });
 
