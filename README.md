@@ -9,10 +9,10 @@ The frontend was done in React.
 
 ## Backend
 
-The project includes a small server to request data from Translink's API and provide it to the frontend.
+I created a small proxy with Express to interface with Translink and deployed it to Heroku to bypass the CORS limitations.
 
 ## To Run
 
-1. $ git clone git@github.com:allisonhamelin/Vancouver-Live-Transit.git
-2. $ yarn install
-3. $ yarn start-client
+1. `$ git clone git@github.com:allisonhamelin/Vancouver-Live-Transit.git`
+2. `$ yarn install`
+3. `$ yarn start-client`
